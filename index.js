@@ -1,3 +1,4 @@
+//bind scroll
 var pic1 = document.getElementById("pic1");
 function scroll(e) {
   console.info(window.scrollY);
@@ -13,3 +14,17 @@ function scroll(e) {
   });
 }
 window.addEventListener("scroll", scroll);
+
+// pull animation
+setTimeout(function(){
+    var pullNodes = document.getElementsByClassName('pull');
+    for(var i=0;i<pullNodes.length;i++){
+            setTimeout((function(i){
+                return function(){
+                    pullNodes[i].style.transform = 'translateY(0)';
+                    pullNodes[i].style.opacity = 1;
+                }
+            })(i), i*100);
+
+    }
+}, 300)
