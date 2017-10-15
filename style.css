@@ -20,6 +20,7 @@ html,body{
 }
 .card-about{
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-content: center;
